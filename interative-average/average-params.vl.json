@@ -23,7 +23,7 @@
         },
         "opacity": {
           "condition": {
-            "test": "brush", "value": 1
+            "selection": "brush", "value": 1
           },
           "value": 0.7
         }
