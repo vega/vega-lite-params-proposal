@@ -5,7 +5,7 @@
       "name": "brush",
       "select": "interval",
       "encodings": ["x"],
-      "view": ["bar-view"]
+      "views": ["bar-view"]
     }],
     "layer": [{
       "name": "bar-view",
@@ -23,14 +23,15 @@
         },
         "opacity": {
           "condition": {
-            "selection": "brush", "value": 1
+            "param": "brush",
+            "value": 1
           },
           "value": 0.7
         }
       }
     }, {
       "transform": [{
-        "filter": "brush"
+        "filter": {"param": "brush"}
       }],
       "mark": "rule",
       "encoding": {
