@@ -23,7 +23,7 @@
         },
         "opacity": {
           "condition": {
-            "param": "brush",
+            "selection": "brush",
             "value": 1
           },
           "value": 0.7
@@ -31,7 +31,7 @@
       }
     }, {
       "transform": [{
-        "filter": {"param": "brush"}
+        "filter": {"selection": "brush"}
       }],
       "mark": "rule",
       "encoding": {
