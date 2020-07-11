@@ -6,13 +6,17 @@
     },
     "params": [{
       "name": "brush",
-      "encodings": ["x"],
-      "select": "interval",
+      "select": {
+        "type": "interval",
+        "encodings": ["x"]
+      },
       "views": ["scatter"]
     }, {
       "name": "click",
-      "encodings": ["color"],
-      "select": "multi",
+      "select": {
+        "type": "multi",
+        "encodings": ["color"]
+      },
       "views": ["hist"]
     }],
     "vconcat": [

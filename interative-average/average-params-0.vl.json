@@ -3,8 +3,10 @@
     "data": {"url": "data/seattle-weather.csv"},
     "params": [{
       "name": "brush",
-      "select": "interval",
-      "encodings": ["x"],
+      "select": {
+        "type": "interval",
+        "encodings": ["x"]
+      },
       "views": ["bar-view"]
     }],
     "layer": [{

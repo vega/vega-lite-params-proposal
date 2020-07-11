@@ -44,8 +44,10 @@
         "mark": "point",
         "params": [{
           "name": "brush",
-          "encodings": ["x"],
-          "select": "interval"
+          "select": {
+            "type": "interval",
+            "encodings": ["x"]
+          }
         }],
         "transform": [{"filter": {"selection": "click"}}]
       },
@@ -70,8 +72,10 @@
         "mark": "bar",
         "params": [{
           "name": "click",
-          "encodings": ["color"],
-          "select": "multi"
+          "select": {
+            "type": "multi",
+            "encodings": ["color"]
+          }
         }],
         "transform": [{"filter": {"selection": "brush"}}]
       }

@@ -4,8 +4,10 @@
     "layer": [{
       "params": [{
         "name": "brush",
-        "select": "interval",
-        "encodings": ["x"]
+        "select": {
+          "type": "interval",
+          "encodings": ["x"]
+        }
       }],
       "mark": "bar",
       "encoding": {
