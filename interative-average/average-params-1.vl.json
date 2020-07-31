@@ -1,48 +1,47 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "data": {"url": "data/seattle-weather.csv"},
-    "layer": [{
-      "params": [{
-        "name": "brush",
-        "select": {
-          "type": "interval",
-          "encodings": ["x"]
-        }
-      }],
-      "mark": "bar",
-      "encoding": {
-        "x": {
-          "timeUnit": "month",
-          "field": "date",
-          "type": "ordinal"
-        },
-        "y": {
-          "aggregate": "mean",
-          "field": "precipitation",
-          "type": "quantitative"
-        },
-        "opacity": {
-          "condition": {
-            "selection": "brush",
-            "value": 1
-          },
-          "value": 0.7
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "data/seattle-weather.csv"},
+  "layer": [{
+    "params": [{
+      "name": "brush",
+      "select": {
+        "type": "interval",
+        "encodings": ["x"]
       }
-    }, {
-      "transform": [{
-        "filter": {"selection": "brush"}
-      }],
-      "mark": "rule",
-      "encoding": {
-        "y": {
-          "aggregate": "mean",
-          "field": "precipitation",
-          "type": "quantitative"
+    }],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "timeUnit": "month",
+        "field": "date",
+        "type": "ordinal"
+      },
+      "y": {
+        "aggregate": "mean",
+        "field": "precipitation",
+        "type": "quantitative"
+      },
+      "opacity": {
+        "condition": {
+          "selection": "brush",
+          "value": 1
         },
-        "color": {"value": "firebrick"},
-        "size": {"value": 3}
+        "value": 0.7
       }
-    }]
-  }
-  
+    }
+  }, {
+    "transform": [{
+      "filter": {"selection": "brush"}
+    }],
+    "mark": "rule",
+    "encoding": {
+      "y": {
+        "aggregate": "mean",
+        "field": "precipitation",
+        "type": "quantitative"
+      },
+      "color": {"value": "firebrick"},
+      "size": {"value": 3}
+    }
+  }]
+}

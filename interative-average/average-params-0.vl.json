@@ -1,50 +1,49 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "data": {"url": "data/seattle-weather.csv"},
-    "params": [{
-      "name": "brush",
-      "select": {
-        "type": "interval",
-        "encodings": ["x"]
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "data/seattle-weather.csv"},
+  "params": [{
+    "name": "brush",
+    "select": {
+      "type": "interval",
+      "encodings": ["x"]
+    },
+    "views": ["bar-view"]
+  }],
+  "layer": [{
+    "name": "bar-view",
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "timeUnit": "month",
+        "field": "date",
+        "type": "ordinal"
       },
-      "views": ["bar-view"]
+      "y": {
+        "aggregate": "mean",
+        "field": "precipitation",
+        "type": "quantitative"
+      },
+      "opacity": {
+        "condition": {
+          "selection": "brush",
+          "value": 1
+        },
+        "value": 0.7
+      }
+    }
+  }, {
+    "transform": [{
+      "filter": {"selection": "brush"}
     }],
-    "layer": [{
-      "name": "bar-view",
-      "mark": "bar",
-      "encoding": {
-        "x": {
-          "timeUnit": "month",
-          "field": "date",
-          "type": "ordinal"
-        },
-        "y": {
-          "aggregate": "mean",
-          "field": "precipitation",
-          "type": "quantitative"
-        },
-        "opacity": {
-          "condition": {
-            "selection": "brush",
-            "value": 1
-          },
-          "value": 0.7
-        }
-      }
-    }, {
-      "transform": [{
-        "filter": {"selection": "brush"}
-      }],
-      "mark": "rule",
-      "encoding": {
-        "y": {
-          "aggregate": "mean",
-          "field": "precipitation",
-          "type": "quantitative"
-        },
-        "color": {"value": "firebrick"},
-        "size": {"value": 3}
-      }
-    }]
-  }
-  
+    "mark": "rule",
+    "encoding": {
+      "y": {
+        "aggregate": "mean",
+        "field": "precipitation",
+        "type": "quantitative"
+      },
+      "color": {"value": "firebrick"},
+      "size": {"value": 3}
+    }
+  }]
+}
