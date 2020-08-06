@@ -16,11 +16,12 @@
     "views": ["bars"]
   }],
   "layer": [{
+    "data": null,
     "mark": "text",
     "encoding": {
       "text": {"value": {"expr": "tooltip.a + ' : ' + tooltip.b"}},
       "x": {"value": {"expr": "tooltip.a"}},
-      "y": {"field": "b", "type": "quantitative"}
+      "y": {"value": {"expr": "tooltip.b"}}
     }
   }, {
     "name": "bars",

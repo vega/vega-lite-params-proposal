@@ -7,22 +7,31 @@
       {"a": "G", "b": 19}, {"a": "H", "b": 87}, {"a": "I", "b": 52}
     ]
   },
+  "params": [{
+    "name": "tooltip",
+    "select": {
+      "type": "point",
+      "on": "hover"
+    },
+    "views": ["bars"]
+  }],
   "layer": [{
-    "data": null,
+    // semantically closer to what users do
+    "data": {
+      "selection": "tooltip"
+    },
     "mark": "text",
     "encoding": {
-      "text": {"value": {"expr": "tooltip.a + ' : ' + tooltip.b"}},
-      "x": {"value": {"expr": "tooltip.a"}},
-      "y": {"value": {"expr": "tooltip.b"}}
+      "text": [{
+        "field": "a"
+      }, {
+        "field": "b"
+      }],
+      "x": {"field": "a"},
+      "y": {"field": "b", "type": "quantitative"}
     }
   }, {
-    "params": [{
-      "name": "tooltip",
-      "select": {
-        "type": "point",
-        "on": "hover"
-      }
-    }],
+    "name": "bars",
     "mark": "bar",
     "encoding": {
       "x": {"field": "a"},

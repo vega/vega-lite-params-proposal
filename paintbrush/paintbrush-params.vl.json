@@ -17,5 +17,5 @@
     "y": {"field": "Miles_per_Gallon", "type": "quantitative"},
     "size": {"condition": {"test": "paintbrush", "value": 300}, "value": 50}
   }
- }
+}
  

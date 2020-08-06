@@ -4,9 +4,9 @@
   "params": [{
     "name": "brush",
     "select": {
-      "type": "interval",
-      "init": {"x": [55, 160], "y": [13, 37]}
-    }
+      "type": "interval"
+    },
+    "value": {"x": [55, 160], "y": [13, 37]}
   }],
   "mark": "point",
   "encoding": {
