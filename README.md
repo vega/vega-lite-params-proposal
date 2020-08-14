@@ -1,12 +1,12 @@
 # Vega-Lite 5 spec examples
 
-Let's add examples with `-signals` (using experimental signals syntax), `-selections` (using selections), and `-params` (using proposed syntax) postfixes in folders for each example.  
+This reporsitory contains example specifications for the params proposal. We are trying to unity selections and signals in Vega-Lite. The example files have names ending with `-signals` (using experimental signals syntax), `-selections` (using selections), and `-params` (using proposed syntax). They are in folders for each example.  
 
 ## Summary of Changes
 
 * Introduce scalar parameters (similar to Vega signals) to Vega-Lite
-* Unify scalar parameters with Vega-Lite selections
-* Top-level parameter and signal definitions
+* Unify scalar parameters with Vega-Lite selections as parameters (params)
+* Top-level parameter definitions
 
 #### Justification
 
