@@ -24,6 +24,8 @@ Unlike the original Vega-Lite selection, parameters can be defined at any specif
 
 ## Docs
 
-https://docs.google.com/document/d/1udcfHaemCzj_YLeeX5b7qcQtIaZEduA2yEt9Xiv8qNc/edit#
+https://docs.google.com/document/d/1sxFjXQnjAjv8A595ZR3PKh-bkAItddXS-4wG2-Cy4_Q/edit
 
-https://docs.google.com/document/d/1sxFjXQnjAjv8A595ZR3PKh-bkAItddXS-4wG2-Cy4_Q/edit?ts=5ed01138#heading=h.w35dwxo17m4p
+## Notes
+
+https://docs.google.com/document/d/1udcfHaemCzj_YLeeX5b7qcQtIaZEduA2yEt9Xiv8qNc/edit
