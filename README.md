@@ -1,6 +1,8 @@
 # Vega-Lite 5 spec examples
 
-This reporsitory contains example specifications for the params proposal. We are trying to unity selections and signals in Vega-Lite. The example files have names ending with `-signals` (using experimental signals syntax), `-selections` (using selections), and `-params` (using proposed syntax). They are in folders for each example.  
+This reporsitory contains example specifications for the params proposal. We are trying to unity selections and signals in Vega-Lite. The example files have names ending with `-signals` (using experimental signals syntax), `-selections` (using selections), and `-params` (using proposed syntax). They are in folders for each example.
+
+**If you have comments, please [create an issue](https://github.com/vega/vega-lite-params-proposal/issues/new).**
 
 ## Summary of Changes
 
